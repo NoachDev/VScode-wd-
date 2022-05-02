@@ -1,0 +1,30 @@
+-|
+  bg                      : gray23
+  test                    : ola
+  test0                   : "test"
+  test1                   : 1
+  test2                   : 0.1
+  dict                    : {test1 : "test", test2 : 1 , test3 : test }
+  list                    : ["test1", 1, test ]
+  tuples                  : ("test1", 1, test )
+|-
+
+.|
+  preset                  : test
+  bg                      : bg
+|.
+
+<|
+  tk_name                 : __master__
+  tk_type                 : window
+  preset                  : test
+
+  {|
+  |}
+
+  [|
+  |]
+
+  (|
+  |)
+|>

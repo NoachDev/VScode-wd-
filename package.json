@@ -1,0 +1,38 @@
+{
+    "name": "tkwd",
+    "displayName": "TkWd",
+    "description": "linguage for tkinter-functions",
+    "version": "0.0.1",
+    "publisher": "TkWd-Noach",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "keywords": [
+        "multi-root ready"
+    ],
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "tkwd",
+                "aliases": [
+                    "TkWd",
+                    "tkwd"
+                ],
+                "extensions": [
+                    ".wd"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tkwd",
+                "scopeName": "source.wd",
+                "path": "./syntaxes/tkwd.tmLanguage.json"
+            }
+        ]
+    }
+}
