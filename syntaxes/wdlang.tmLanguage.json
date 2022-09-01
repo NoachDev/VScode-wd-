@@ -1,0 +1,102 @@
+{
+  "name": "wdlang",
+  "patterns": [
+    {
+      "begin": "\\[([|])",
+      "end": "([|])\\]",
+      "patterns": [
+        {
+          "include": "#wd_values"
+        },
+        {
+          "match": "\\p{Word}",
+          "name": "entity.name.function"
+        }
+      ]
+    },
+    {
+      "begin": ".([|])",
+      "end": "([|].)",
+      "patterns": [
+        {
+          "include": "#type"
+        },
+        {
+          "include": "#wd_exept"
+        },
+        {
+          "include": "#wd_values"
+        },
+        {
+          "match": "\\p{Word}",
+          "name": "variable.name"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
+          "name": "constant.quoted.double",
+          "begin": "\"\"",
+          "end": "\"\""
+        },
+        {
+          "name": "constant.quoted.triple",
+          "begin": "\"\"\"",
+          "end": "\"\"\""
+        },
+        {
+          "match": "(\\p{Digit}*)\\p{Alpha}(\\p{Digit}*)",
+          "name": "string"
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric",
+      "match": "([0-9.])"
+    },
+    "wd_exept": {
+      "name": "keyword",
+      "match": "tk_name | preset"
+    },
+    "wd_values": {
+      "begin": ":",
+      "end": "$",
+      "patterns": [
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "match": "\\p{Word}",
+          "name": "string"
+        }
+      ]
+    },
+    "type": {
+      "begin": "tk_type",
+      "end": "$",
+      "captures": {
+        "0": {
+          "name": "keyword"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\p{Word}",
+          "name": "entity.name.class"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.wd"
+}
