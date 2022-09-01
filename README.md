@@ -1,2 +1,2 @@
 # VScode-wd-
-extencion for vescode of files wd (Tk-functions | https://github.com/NoachDev/Tk-functions)
+extencion for vescode of files wd (wdlang | https://github.com/NoachDev/WdLanguage)
